@@ -1,0 +1,39 @@
+﻿@model MVCEMPTY.ViewModels.EmployeeDetails
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        <h2>Employee Details</h2>
+        <table>
+            <tr>
+                <td>@Model.Employee.Id</td>
+                <td>@Model.Employee.Name</td>
+                <td>@Model.Employee.Department</td>
+                <td>@Model.Employee.Gender</td>
+                <td>@Model.Employee.Salary</td>
+                <td>@Model.Employee.AddressID</td>
+            </tr>
+        </table>
+        <hr />
+        <h2>Address Details</h2>
+        <table>
+            <tr>
+                <td>@Model.Address.AddressId</td>
+                <td>@Model.Address.City</td>
+                <td>@Model.Address.State</td>
+                <td>@Model.Address.Country</td>
+                <td>@Model.Address.Pin</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+﻿@model MVCEMPTY.Models.Student
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @*@{ 
+        var student = ViewData["student"]
+            as MVCEMPTY.Models.Student;
+    }*@
+    @*@{ 
+        var student = ViewBag.student;
+    }*@
+    <div> 
+        <h2>Student Detail</h2>
+        <table>
+            <tr>
+                <td>Student ID</td>
+                <td>@Model.Id</td>
+            </tr>
+            <tr>
+                <td>Student Name</td>
+                <td>@Model.Name</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
