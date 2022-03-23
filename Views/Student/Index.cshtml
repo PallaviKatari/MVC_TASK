@@ -31,6 +31,30 @@
                 <td>@Model.Name</td>
             </tr>
         </table>
+        <hr />
+        <pre style="font-size:14px">
+Routing
+-----------
+Routing plays important role in the MVC framework. Routing maps URL to physical file or class (controller class in MVC).
+Route contains URL pattern and handler information. URL pattern starts after the domain name.
+Routes can be configured in RouteConfig class. Multiple custom routes can also be configured.
+Route constraints apply restrictions on the value of parameters.
+Route must be registered in Application_Start event in Global.ascx.cs file.
+<hr />
+Multiple Routes
+You can also configure a custom route using the MapRoute extension method. 
+You need to provide at least two parameters in MapRoute, route name, and URL pattern. 
+The Defaults parameter is optional.
+
+You can register multiple custom routes with different names. 
+Consider the example where we register "Student" route.
+The URL pattern for the Student route is students/{id}, which specifies that any URL that starts with domainName/students, must be handled by the StudentController. 
+Notice that we haven't specified {action} in the URL pattern because we want every URL that starts with students should always use the Index() action of the StudentController class. 
+We have specified the default controller and action to handle any URL request, which starts from domainname/students.
+MVC framework evaluates each route in sequence. 
+It starts with the first configured route, and if incoming URL doesn't satisfy the URL pattern of the route, then it will evaluate the second route and so on. 
+In the example, routing engine will evaluate the Student route first and if incoming URL doesn't start with /students then only it will consider the second route which is the default route.
+</pre>
     </div>
 </body>
 </html>

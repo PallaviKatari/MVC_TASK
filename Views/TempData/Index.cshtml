@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @TempData["Message"];
+        <hr />
+        <pre>
+        What is TempData
+        1. TempData is derived from the TempDataDictionary class and is basically a Dictionary object i.e. Keys and Values where Keys are String while Values will be objects.
+        2. Data is stored as Object in TempData.
+        3. While retrieving, the data it needs to be Type Casted to its original type as the data is stored as objects and it also requires NULL checks while retrieving.
+        4. TempData can be used for passing value from Controller to View and also from Controller to Controller.
+        5. TempData is available for Current and Subsequent Requests. It will not be destroyed on redirection.
+        </pre>
+    </div>
+
+</body>
+</html>

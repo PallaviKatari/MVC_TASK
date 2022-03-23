@@ -1,0 +1,36 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetTraineeCourses</title>
+</head>
+<body>
+    <div>
+        <ul>
+            @foreach (var item in ViewBag.CourseList)
+            {
+                <li>@item</li>
+            }
+        </ul>
+        <hr />
+        <pre>
+What are the advantages of using Attribute Routing in ASP.NET MVC5?
+<hr />
+It gives us more control over the URIs than convention-based routing. 
+Creating URI patterns like hierarchies of resources 
+(For example, students have courses, Departments have employees) 
+is very difficult with convention-based routing.
+Reduces the chances for errors, if a route is modified incorrectly 
+in RouteConfig.cs then it may affect the entire application’s routing.
+May decouple controller and action names from route entirely.
+Easy to map two routes pointing to the same action.
+        </pre>
+    </div>
+</body>
+</html>

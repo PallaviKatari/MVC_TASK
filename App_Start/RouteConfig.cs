@@ -14,9 +14,31 @@ namespace MVCEMPTY
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+            name: "Student",
+            url: "students/{id}",
+            defaults: new { controller = "Student", action = "Index"}
+        );
+            //Enabling attribute routing 
+            routes.MapMvcAttributeRoutes();
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: 
+                new 
+                { 
+                    controller = "Home", 
+                    action = "Index", 
+                    id = UrlParameter.Optional 
+                }
+            
+                //constraints: new { id = @"\d+" }
+                //new
+                //{
+                //    controller = "H.*",
+                //    action = "Index"
+                //}
+
             );
         }
     }

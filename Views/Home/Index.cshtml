@@ -14,12 +14,13 @@
     <div> 
         <h2>Course Details</h2>
         <ul>
-            @{ 
+            @TempData["Message"];
+            @*@{ 
                 foreach(var courses in ViewData["list"] as List<string>)
             {
                 <li>@courses</li>
             }
-            }
+            }*@
         </ul>
     </div>
 </body>

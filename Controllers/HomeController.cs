@@ -21,14 +21,18 @@ namespace MVCEMPTY.Controllers
 
         public ActionResult Index()
         {
-            List<string> list = new List<string>();
-            list.Add("DOTNET");
-            list.Add("Java");
-            list.Add("Python");
-            list.Add("PHP");
-            ViewData["list"] = list;
-            return View(list);
+            TempData["Message"] = "Hello MVC!";
+            //return View();
+            return new RedirectResult(@"~\TempData\");
+            //List<string> list = new List<string>();
+            //list.Add("DOTNET");
+            //list.Add("Java");
+            //list.Add("Python");
+            //list.Add("PHP");
+            //ViewData["list"] = list;
+            //return View(list);
         }
+        
 
 
 

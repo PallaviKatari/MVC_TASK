@@ -1,0 +1,37 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>WEBAPI</title>
+</head>
+<body>
+    <div>
+        @ViewBag.Message
+        <hr />
+        <pre>
+ASP.NET MVC Attribute Routing with Optional Parameter:
+<hr />
+You can also define a URI parameter as optional by adding a question mark (“?”) to the route parameter. 
+You can also specify the default value by using parameter = value. 
+
+To understand this concept, let’s add a TraineeController within the controller folder. 
+As you can see, in the MVC action method, we place a question mark after the parameter studentName 
+within the Route attribute as [Route(“MVCTest/{studentName ?}”)] 
+which makes the studentName parameter optional. 
+If you have not specified any value for the studentName parameter 
+in the URL, then it will store a null value in it and if 
+you specified any value in the URL for the studentName parameter, 
+then that value will be mapped to the studentName Parameter. 
+In the WEBAPI action method, we have specified a default value for the 
+studentName Parameter directly in the Route attribute as 
+Route(“WEBAPITest/{studentName = John}”)].
+</pre>
+    </div>
+</body>
+</html>
